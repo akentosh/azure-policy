@@ -12,12 +12,7 @@ module "tfconfig-functions" {
 
 policy "enforce-mandatory-tags" {
     source = "./enforce-mandatory-tags.sentinel"
-    enforcement_level = "advisory"
-}
-
-policy "restrict-app-service-to-https" {
-    source = "./restrict-app-service-to-https.sentinel"
-    enforcement_level = "advisory"
+    enforcement_level = "soft-mandatory"
 }
 
 policy "restrict-publishers-of-current-vms" {
